@@ -23,7 +23,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass' ,  '~> 5.6.1'
 
 gem 'simple_form'
-
+gem 'faker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
