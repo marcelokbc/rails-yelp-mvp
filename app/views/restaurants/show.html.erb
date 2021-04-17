@@ -1,1 +1,19 @@
-<h1> <%= @restaurant.name %></h1>
+<div class="container">
+    <h1>Show restaurant</h1>
+  <div class="restaurant-display">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="<%= @restaurant.images %>"style="width: 400px;">
+      </div>
+      <div class="col-lg-6">
+        <h1><%= @restaurant.name %></h1>
+        <p><%= @restaurant.address %></p>
+        <p><%= @restaurant.phone_number %></p>
+        <p><%= @restaurant.category %></p>
+        <p><%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant)  %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

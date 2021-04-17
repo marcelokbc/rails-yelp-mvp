@@ -1,0 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.sgsgroup.com.br/-/media/global/images/structural-website-images/hero-images/hero-agri-appetizers.jpg">
+  <div class="container">
+    <h1>The best restaurants in one place</h1>
+    <p>Everything you need for the best restaurant</p>
+</div>
+
+
+<div class="container">
+   <%= link_to "Add new Restaurant", new_restaurant_path %>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="content-flex">
+      <% @restaurants.each do |restaurant|  %>
+      <div class="content-box">
+      <img src="<%= restaurant.images %>"style="width:400px;" >
+      <p>  <%=link_to  restaurant.name, restaurant_path(restaurant) %> </p>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
