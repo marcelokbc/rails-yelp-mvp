@@ -2,11 +2,13 @@
   <div class="container">
     <h1>The best restaurants in one place</h1>
     <p>Everything you need for the best restaurant</p>
+  </div>
+   <p><%= link_to "Add new Restaurant", new_restaurant_path, class:" btn-my-primary" %> </p>
 </div>
 
 
 <div class="container">
-   <%= link_to "Add new Restaurant", new_restaurant_path %>
+
 </div>
 
 <div class="container">
@@ -14,7 +16,7 @@
     <div class="content-flex">
       <% @restaurants.each do |restaurant|  %>
       <div class="content-box">
-      <img src="<%= restaurant.images %>"style="width:400px;" >
+        <img class="grid-img" src="<%= restaurant.images %>">
       <p>  <%=link_to  restaurant.name, restaurant_path(restaurant) %> </p>
       </div>
     <% end %>

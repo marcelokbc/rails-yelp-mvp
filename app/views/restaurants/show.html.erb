@@ -10,10 +10,12 @@
         <p><%= @restaurant.address %></p>
         <p><%= @restaurant.phone_number %></p>
         <p><%= @restaurant.category %></p>
-        <p><%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant)  %></p>
       </div>
     </div>
   </div>
+  <p><%= link_to "Home", restaurants_path, class: "btn btn-primary" %></p>
+  <p><%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant), class: "btn btn-primary" %></p>
+  <p><%= link_to "Delete restaurant", destroy_restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary" %> </p>
 </div>
 
 
